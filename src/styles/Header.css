@@ -1,0 +1,72 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    width: calc(100% - 20px);
+    border-radius: 0 0 8px 8px;
+    border-color: black;
+}
+
+.titleSection {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.titleSection .roomName {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+  
+.aliasForm {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+  
+.aliasInput {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+}
+  
+.aliasButton {
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    border-left: none;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+  
+.aliasButton:hover {
+    filter: brightness(90%);
+}
+  
+.aliasDisplay {
+    margin-left: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}

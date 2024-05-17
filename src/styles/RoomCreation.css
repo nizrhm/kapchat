@@ -1,0 +1,96 @@
+:root {
+    --primary-color: white; 
+    --secondary-color: #252525; 
+    ; 
+  }
+  
+  .roomCreationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: var(--primary-color); 
+  }
+  
+  .roomCreationSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 400px;
+    margin: 20px;
+  }
+  
+  .creationTitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--secondary-color); 
+  }
+  
+  .creationOverview {
+    color: var(--secondary-color); 
+  }
+  
+  .creationForm {
+    display: flex;
+    width: 100%;
+  }
+  
+  .roomInput {
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+  }
+  
+  .createRoomButton {
+    padding: 10px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-left: none;
+    font-weight: bold;
+    background: var(--secondary-color); 
+    color: var(--primary-color); 
+  }
+  
+  .createRoomButton:hover {
+    filter: brightness(90%);
+  }
+  
+  .logo {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .footer {
+    margin-top: auto; 
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .footerText {
+    font-size: 14px;
+    color: var(--secondary-color); 
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 10px 20px;
+  }
+  
+  .whiteBody {
+    --primary-color:      #252525; 
+    ; 
+    --secondary-color: white;
+    
+  }
+  
