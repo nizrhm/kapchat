@@ -11,25 +11,21 @@ function RoomCreation() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = `Nizaul`;
+    document.title = `Kap-chat`;
   }, []);
 
-  const generateRandomName = () => {
-    const adjectives = ['1234', '234', '1234', '6789', '123456', '9879'];
-    const nouns = ['99847', '8988989', '65665', '334657', '122134', '77645'];
-    const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-    const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
-    return `${randomAdjective}-${randomNoun}`;
+  const generateRandomRoomId = () => {
+    return Math.floor(10000000 + Math.random() * 90000000).toString(); // Generate an 8-digit random number
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const randomRoomName = generateRandomName();
-    const roomId = await createRoom(randomRoomName, Cookies.get('userId'));
-    if (roomId) {
+    const roomId = generateRandomRoomId();
+    const created = await createRoom(roomId, Cookies.get('userId'));
+    if (created) {
       navigate(`/room/${roomId}`);
     } else {
-      console.error("Failed to create id.");
+      console.error("Failed to create room.");
     }
   };
 
@@ -56,7 +52,7 @@ function RoomCreation() {
         <form onSubmit={handleSubmit} className="creationForm">
           <input
             type="text"
-            value={roomName || generateRandomName()} // Set value to roomName if available
+            value={roomName}
             onChange={(e) => setRoomName(e.target.value)}
             placeholder="Room Name"
             className="roomInput"
