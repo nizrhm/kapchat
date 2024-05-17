@@ -11,7 +11,7 @@ function RoomCreation() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = `Kap-chat`;
+    document.title = `Nizaul`;
   }, []);
 
   const generateRandomRoomId = () => {
